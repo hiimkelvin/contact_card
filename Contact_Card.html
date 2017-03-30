@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact Card</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+
+				$('.top_box').click(function(){
+					$('.top_box').replaceWith("<div class='top_box'><p>Codingdojo's fearless leader. Master of instruction.</p></div>");
+				})
+
+				$('.middle_box').click(function(){
+					$('.middle_box').replaceWith("<div class='middle_box'><p>Codingdojo's fearless leader. Master of instruction.</p></div>");
+				})
+
+				$('.bottom_box').click(function(){
+					$('.bottom_box').replaceWith("<div class='bottom_box'><p>Codingdojo's fearless leader. Master of instruction.</p></div>");
+				})
+
+
+				$(document).on('click', '.new_box', function(){
+					var descript = $('#description').val();
+					$('.new_box').replaceWith("<div class='new_box'><p>" + descript + "</p></div>");
+				})
+
+
+				$('button').click(function(){
+					var first = $('#first').val();
+					var last = $('#last').val();
+
+					$('.box').append("<div class='new_box'><h1>" + first +" "+ last+"</h1><p>Click for Description!</p></div>");
+
+				})
+
+					return false;
+
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="leftcontent">
+			<p>First Name: <input id='first' type="text" name="first_name"></p>
+			<p>Last Name: <input id='last' type="text" name="last_name"></p>
+			<p>Description:</p>
+			<p><textarea id='description'></textarea></p>
+			<p><button>Add User</button></p>
+		</div>
+		<div id="rightcontent">
+			<div class="top_box">
+				<h1>Michael Choi</h1>
+				<p>Click for description!</p>
+			</div>
+			<div class="middle_box">
+				<h1>John Supsupin</h1>
+				<p>Click for description!</p>
+			</div>
+			<div class="bottom_box">
+				<h1>Dexter Clark</h1>
+				<p>Click for description!</p>
+			</div>
+			<div class="box">
+
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
